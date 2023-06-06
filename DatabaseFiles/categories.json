@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "647f12a8f4b7314dc57c17fd"
+  },
+  "Name": "Horror",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f12b4f4b7314dc57c17ff"
+  },
+  "Name": "Romance",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f12bff4b7314dc57c1801"
+  },
+  "Name": "Classic",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f164e27aebf60ee9c64f7"
+  },
+  "Name": "Comic",
+  "__v": 0
+}]

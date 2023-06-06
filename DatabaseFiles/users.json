@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "647e6ad00c9519441b21f697"
+  },
+  "isAdmin": false,
+  "firstName": "Mariam",
+  "lastName": "Mohamed",
+  "email": "mariam_m@yahoo.com",
+  "password": "$2b$10$MKPfVcw2Pr2KXrVPdXSMUutQPHYzJxnOiMwZq1qdrtvIjE8w1cDTC",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f0874f4b7314dc57c17d9"
+  },
+  "isAdmin": true,
+  "firstName": "Doaa",
+  "lastName": "Ghopashe",
+  "email": "doaa@yahoo.com",
+  "password": "$2b$10$hfUxNRMtX6aXHZDjj.Z9O.0SdAz1DovTHg91qlAImCyDjrY/ZeApm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f3f1527aebf60ee9c7a88"
+  },
+  "isAdmin": false,
+  "firstName": "Elif ",
+  "lastName": "Maged",
+  "email": "elif@yahoo.com",
+  "password": "$2b$10$3Z9aO9YLN6N0f.c7md7bZO6aQR2jd7Gz7yjJGtJC34cbkkg4jb79.",
+  "__v": 0
+}]

@@ -1,0 +1,14 @@
+
+
+<nav class="nav justify-content-center nav-info">
+  <a class="nav-link"  routerLink="home">Home</a>
+  <a class="nav-link"  routerLink="about">About</a>
+  <a class="nav-link"  routerLink="contact">Contact</a>
+  <a *ngIf="isLog&&!isadmine" class="nav-link " routerLink="categories">Categories</a>
+  <a *ngIf="isLog&&!isadmine" class="nav-link" routerLink="books">Books</a>
+  <a *ngIf="isLog&&!isadmine" class="nav-link" routerLink="authors">Authors</a>
+  <a *ngIf="isLog&&!isadmine" class="nav-link" routerLink="mybook">My Book</a>
+  <a *ngIf="isLog&&isadmine" class="nav-link " routerLink="/admin/category">AdminCategories</a>
+  <a *ngIf="isLog&&isadmine" class="nav-link" routerLink="admin/book">AdminBooks</a>
+  <a *ngIf="isLog&&isadmine" class="nav-link" routerLink="admin/authors">AdminAuthors</a>
+</nav>

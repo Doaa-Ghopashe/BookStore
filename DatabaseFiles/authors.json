@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "647f158927aebf60ee9c64ea"
+  },
+  "Image": "assets/imgs/authors/image-Image-1686050185629.png",
+  "firstName": "Aya",
+  "lastName": "Moustafa",
+  "dateOfBirth": "2/5/2000",
+  "breif": "She is a good girl",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1686050185634"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1686050185634"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f15a827aebf60ee9c64ed"
+  },
+  "Image": "assets/imgs/authors/image-Image-1686050216674.png",
+  "firstName": "Mona",
+  "lastName": "Mansour",
+  "dateOfBirth": "2/5/2000",
+  "breif": "She is a good girl",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1686050216680"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1686050216680"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f15c727aebf60ee9c64f0"
+  },
+  "Image": "assets/imgs/authors/image-Image-1686050247648.png",
+  "firstName": "Omnia",
+  "lastName": "Khaled",
+  "dateOfBirth": "2/5/2000",
+  "breif": "She is a good girl",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1686050247662"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1686050247662"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f161527aebf60ee9c64f3"
+  },
+  "Image": "assets/imgs/authors/image-Image-1686050325171.jpeg",
+  "firstName": "Doaa",
+  "lastName": "Adel",
+  "dateOfBirth": "10/11/1999",
+  "breif": "She is a good girl",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1686050325178"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1686050325178"
+    }
+  },
+  "__v": 0
+}]

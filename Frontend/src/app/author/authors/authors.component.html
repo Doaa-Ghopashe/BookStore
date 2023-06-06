@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="mt-5" style="text-align: center;"> Authors </h1>
+    <br><br>
+    <div>
+        <div class="row" >
+            <div *ngFor="let author of allAuthors | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }" class="col-md-3 my-3">
+
+               
+                <div class="card" (click)="showauthordetails(author._id)">
+                    <div class="author-img">
+                        <img src="http://localhost:5000/{{ author.Image.split('assets')[1] }}" alt="">
+                    </div>
+                    <div class="card-body">                        
+                        <span class="author-name" my-3>{{author.firstName}} {{author.lastName}}</span>
+                        <p></p>
+                        <p>{{author.breif}}</p>
+                        <p>{{author.dateOfBirth}}</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="text-center paginationNav mt-2">
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+        </div>
+    </div>
+</div>

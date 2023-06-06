@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+img
+{
+    width: 100%;
+}
+.bookname
+{
+    font-size: 32px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2px;
+    display: block
+}
+.authorname
+{
+    font-size: 26px;
+    display: block;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+.category
+{
+    font-size: 23px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
+    margin-bottom: 15px 
+}
+.avgrate
+{
+    display: flex;
+}
+.bookrate
+{
+    margin: 18px 0;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookrate span
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+.bookdesc
+{
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    margin-top: 20px;
+}
+.controllablestars
+{
+    color:orange;
+    font-size: 40px;
+    
+}
+select
+{
+    display: block;
+    margin: auto;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 2px solid black;
+    padding: 3px 6px;
+}
+option
+{
+    font-weight: 800;
+    
+}

@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "647f1fe027aebf60ee9c66d6"
+  },
+  "book_id": "647f16a627aebf60ee9c64fc",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "shelve": "want to read",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f303c27aebf60ee9c72f8"
+  },
+  "book_id": "647f174527aebf60ee9c6506",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "shelve": "currently reading",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f304e27aebf60ee9c7328"
+  },
+  "book_id": "647f186127aebf60ee9c651a",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "shelve": "read",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f37e627aebf60ee9c751e"
+  },
+  "book_id": "647f181727aebf60ee9c6515",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "shelve": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f39a527aebf60ee9c75dd"
+  },
+  "book_id": "647f178927aebf60ee9c650b",
+  "user_id": "647e6ad00c9519441b21f697",
+  "shelve": "currently reading",
+  "__v": 0
+}]

@@ -1,0 +1,137 @@
+
+<div class="container-fluid" style="background-color: #f1f5f9">
+    <a (click)="showAddBox()">
+        <i class="fa fa-plus-square fs-5 mt-2"></i>
+    </a>
+    <div class="row flex-nowrap author-info">
+      <div class="container-fluid" style="width: 82vw">
+        <div class="pageBox mt-4 ">
+            <table class="text-center">
+                <thead class="mb-3">
+                    <th>id</th>
+                    <th>Photo</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of birth</th>
+                    <th>Action</th>
+                </thead>
+                <div class="py-2"></div>
+                <tbody>
+                    <tr *ngFor = "let autor of allAuthores | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage };index as i">
+                        <td >{{i+1}}</td>
+                        <td>
+                            <img style="height: 50px; width:50px;" class="mb-3" src="http://localhost:5000/{{autor.Image.split('assets')[1]}}" alt="Author Photo">
+                        </td>
+                        <td>{{autor.firstName}}</td>
+                        <td>{{autor.lastName}}</td>
+                        <td>{{autor.dateOfBirth}}</td>
+                        <td>
+                            <a (click)="showUpdateBox(autor._id)">
+                                <i class="fa-solid fa-pen me-3 mt-4"></i>
+                            </a>
+                            <a (click)="deleteAuthor(autor._id)">
+                                <i class="fa-regular fa-trash-can mt-4"></i>
+                            </a> 
+                        </td>
+                    </tr>
+                </tbody>
+             </table>
+
+             <div class="text-center paginationNav mt-">
+                <pagination-controls  (pageChange)="currentPage = $event"></pagination-controls>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+
+<div class="layer position-absolute position-relative px-5 py-3 rounded text-center" id="layer">
+    <a (click)="closeAddBox()" class="position-absolute close">
+        <i class="fa fa-close fs-5"></i>
+    </a>
+    <h1 class="mt-4">Add Author</h1>
+    <form  [formGroup]="addAuthorForm" method="post" enctype="multipart/form-data" (ngSubmit)="addAuthor()" class="py-4">
+        <div class="form-group mb-4">
+            <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter first name" formControlName="firstName">
+            <div *ngIf="addAuthorForm.controls['firstName'].errors&& addAuthorForm.controls['firstName'].touched ">
+                <span *ngIf="addAuthorForm.controls['firstName'].errors?.['required']!==undefined" class="text-danger">First Name is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-4">
+            <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter last name" formControlName="lastName">
+            <div *ngIf="addAuthorForm.controls['lastName'].errors&& addAuthorForm.controls['lastName'].touched ">
+                <span *ngIf="addAuthorForm.controls['lastName'].errors?.['required']!==undefined" class="text-danger">Last Name is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-4">
+            <input required type="text" class="form-control my-2 bg-transparent" placeholder="Enter birthDate" formControlName="birthOfDate">
+            <div *ngIf="addAuthorForm.controls['birthOfDate'].errors&& addAuthorForm.controls['birthOfDate'].touched ">
+                <span *ngIf="addAuthorForm.controls['birthOfDate'].errors?.['required']!==undefined" class="text-danger">Date is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <textarea required  class="form-control"  formControlName="breif" placeholder="Breif"></textarea>
+            <div *ngIf="addAuthorForm.controls['breif'].errors&& addAuthorForm.controls['breif'].touched ">
+                <span *ngIf="addAuthorForm.controls['breif'].errors?.['required']!==undefined" class="text-danger">Breif is required</span>
+
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <input type="file" required  class="form-control" formControlName="Image" placeholder="Image" (change)="addphoto($event)">
+            <div *ngIf="addAuthorForm.controls['Image'].errors&& addAuthorForm.controls['Image'].touched ">
+                <span *ngIf="addAuthorForm.controls['Image'].errors?.['required']!==undefined" class="text-danger">Photo is required</span>
+            </div>
+        </div>
+        <button [disabled]="addAuthorForm.invalid" type="submit" class="btn">Add Author</button>
+    </form>
+</div>
+
+
+
+<div class="updatelayer position-absolute position-relative px-5 py-3 rounded text-center" id="updatelayer">
+    <a (click)="closeUpdateBox()" class="position-absolute close">
+        <i class="fa fa-close fs-5"></i>
+    </a>
+    <h1 class="mt-4">Update Book</h1>
+    <form  [formGroup]="updateAuthorForm" method="post" enctype="multipart/form-data" (ngSubmit)="updateAuthor()" class="py-4">
+        <div class="form-group mb-4">
+            <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter first name" formControlName="firstName">
+            <div *ngIf="updateAuthorForm.controls['firstName'].errors&& updateAuthorForm.controls['firstName'].touched ">
+                <span *ngIf="updateAuthorForm.controls['firstName'].errors?.['required']!==undefined" class="text-danger">First Name is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-4">
+            <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter last name" formControlName="lastName">
+            <div *ngIf="updateAuthorForm.controls['lastName'].errors&& updateAuthorForm.controls['lastName'].touched ">
+                <span *ngIf="updateAuthorForm.controls['lastName'].errors?.['required']!==undefined" class="text-danger">Last Name is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-4">
+            <input required type="text" class="form-control my-2 bg-transparent" placeholder="Enter birthDate" formControlName="birthOfDate">
+            <div *ngIf="updateAuthorForm.controls['birthOfDate'].errors&& updateAuthorForm.controls['birthOfDate'].touched ">
+                <span *ngIf="updateAuthorForm.controls['birthOfDate'].errors?.['required']!==undefined" class="text-danger">Date is required</span>
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <textarea required  class="form-control"  formControlName="breif" placeholder="Breif"></textarea>
+            <div *ngIf="updateAuthorForm.controls['breif'].errors&& updateAuthorForm.controls['breif'].touched ">
+                <span *ngIf="updateAuthorForm.controls['breif'].errors?.['required']!==undefined" class="text-danger">Breif is required</span>
+
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <input type="file" required  class="form-control"  placeholder="Image" (change)="addphoto($event)">
+            <div *ngIf="updateAuthorForm.controls['Image'].errors&& updateAuthorForm.controls['Image'].touched ">
+                <span *ngIf="updateAuthorForm.controls['Image'].errors?.['required']!==undefined" class="text-danger">Photo is required</span>
+            </div>
+        </div>
+        <button [disabled]="updateAuthorForm.invalid" type="submit" class="btn">Update Author</button>
+    </form>
+</div>
+
+
+
+
+

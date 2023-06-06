@@ -1,0 +1,56 @@
+$mainColor :#ab64bd;
+.navbar
+{
+    margin:0px 60px;
+    padding: 15px 60px;
+    .navbar-brand ,.nav-link
+    {
+        color :#000
+    }
+    .logo-icone
+    {
+        color:#ab64bd
+    }
+    .dropdown-menu
+    {
+        min-width: 7rem;
+        box-shadow: 1px 1px 10px $mainColor;
+        border: none;
+        color: #5e83a9;
+    }
+    .dropdown-item:hover
+    {
+        background-color: #ede8ef;
+        
+    }
+    .navbar-toggler
+    {
+        color: $mainColor;
+        border: none;
+    }
+    .navbar-nav .dropdown-toggle
+    {
+        font-size: 18px;
+    }
+    .navbar-nav .dropdown-toggle:hover
+    {
+        color: $mainColor;
+    }
+  
+}
+
+
+
+
+@media (max-width:991px) {
+.navbar
+{
+    margin:0px;
+    padding: 15px;
+}
+
+}
+@media (max-width:590px) {
+
+
+}

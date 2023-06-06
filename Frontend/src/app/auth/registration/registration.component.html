@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-6 pe-5">
+            <form  [formGroup]="regestrationForm" (ngSubmit)="register()" class="py-4">
+                <h4 class="mb-3">Sign Up</h4>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter your first name" formControlName="firstName">
+                    <div *ngIf="regestrationForm.controls['firstName'].errors&& regestrationForm.controls['firstName'].touched ">
+                        <span *ngIf="regestrationForm.controls['firstName'].errors?.['required']!==undefined" class="text-danger">first Name is required</span>
+                        <span *ngIf="regestrationForm.controls['firstName'].errors?.['minlength']" class="text-danger">Min length must be 3</span>
+                        <span *ngIf="regestrationForm.controls['firstName'].errors?.['maxlength']" class="text-danger">Max length must be 20</span>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <!-- <label for="">Last Name:</label> -->
+                    <input type="text" class="form-control my-2 bg-transparent" placeholder="Enter your last name" formControlName="lastName">
+                    <div *ngIf="regestrationForm.controls['lastName'].errors&& regestrationForm.controls['lastName'].touched ">
+                        <span *ngIf="regestrationForm.controls['lastName'].errors?.['required']!==undefined" class="text-danger">Last Name is required</span>
+                        <span *ngIf="regestrationForm.controls['lastName'].errors?.['minlength']" class="text-danger">Min length must be 3</span>
+                        <span *ngIf="regestrationForm.controls['lastName'].errors?.['maxlength']" class="text-danger">Max length must be 20</span>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <!-- <label for="">Email:</label> -->
+                    <input type="email" class="form-control my-2 bg-transparent" placeholder="Enter your email" formControlName="email">
+                    <div *ngIf="regestrationForm.controls['email'].errors&& regestrationForm.controls['email'].touched ">
+                        <span *ngIf="regestrationForm.controls['email'].errors?.['required']!==undefined" class="text-danger">email is required</span>
+                        <span *ngIf="!regestrationForm.controls['email'].errors?.['required'] && regestrationForm.controls['email'].errors!=null " class="text-danger">Email not valid </span>   
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <!-- <label for="">Password:</label> -->
+                    <input type="password" class="form-control my-2 bg-transparent" placeholder="Enter password" formControlName="password">
+                    <div *ngIf="regestrationForm.controls['password'].errors&& regestrationForm.controls['password'].touched ">
+                        <span *ngIf="regestrationForm.controls['password'].errors?.['required']!==undefined" class="text-danger">password is required</span>
+                        <span *ngIf="!regestrationForm.controls['password'].errors?.['required'] && regestrationForm.controls['password'].errors!=null " class="text-danger">Password must start with small letter then conatin from 3 to 8 numbers </span>   
+                    </div>
+                </div>
+                <!-- <div class="form-group mb-4">
+                    <input type="password" class="form-control my-2 bg-transparent"  placeholder="repeat password" formControlName="rePassword">
+                    <div *ngIf="regestrationForm.controls['rePassword'].errors&& regestrationForm.controls['rePassword'].touched ">
+                        <span *ngIf="regestrationForm.controls['rePassword'].errors?.['required']" class="text-danger">rePassword is required</span>
+                        <span *ngIf="regestrationForm.controls['password'].value !== regestrationForm.controls['rePassword'].value " class="text-danger">Repassword must match password </span>   
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <input type="file" class="form-control my-2 bg-transparent" formControlName="image">
+                    <div *ngIf="regestrationForm.controls['image'].errors&& regestrationForm.controls['image'].touched ">
+                        <span *ngIf="regestrationForm.controls['image'].errors?.['required']" class="text-danger">Image is required</span> 
+                    </div>
+                </div> -->
+                <button [disabled]="regestrationForm.status=='INVALID'"  type="submit" class="btn">Submit</button>
+                <span class="ms-4"><a (click)="navigate()">Do have account <span class="navigate">plz login?</span></a></span>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <img src="../../../assets/images/360_F_339709134_9FKW6cgJi0uosfWb2bD4zdcerTvRvNXv.jpg" alt="" srcset="">
+        </div>
+    </div>
+</div>

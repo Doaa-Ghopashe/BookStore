@@ -1,0 +1,159 @@
+
+  <section class="container-fluid home-info">
+    <div class="row  h-100 align-items-center py-5">
+        <div class="col-md-6">
+            <div class="info">
+                <div class="p-5">
+                    <h1>Good Book-Store.</h1>
+                    <div class="d-flex">
+                        <div id="typed-strings">
+                            <p>Reading at any time.</p>
+                            <p>You can see the most famous books and authors.</p>
+                        </div>
+                        <p id="typed"></p>
+                    </div>
+                    <p>This is a site through which you can know the most famous book and book sections, and you can also read books and express your admiration for this book and know the details about it and know the book and all their books and also know the opinion of everyone who read this book</p>
+                    <button class="btn">Show More</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  px-4">
+            <section class="popularBooks container py-3 text-center rounded">
+                <div class="row px-4 mt-4">
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-container *ngFor="let slide of books">
+                          <ng-template carouselSlide [id]="slide.id">
+                                <div class="card text-dark m-2">
+                                    <img style="height: 300px;" class="card-img-top" src="http://localhost:5000/{{ slide.photo.split('assets')[1]}}" alt="Title">
+                                    <div class="card-body">
+                                      <h6 class="card-title">{{slide.title}}</h6>
+                                    </div>
+                                </div>
+                          </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="ring py-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fa-solid fa-book"></i>
+                    <h4>Many Books</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, quos.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fa fa-star pe-2"></i>
+                    <h4>Categoery</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, quos.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fa fa-user pe-2"></i>
+                    <h4>Users account</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, quos.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <h4>Add Reviews</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, quos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="popularBooks container py-5 text-center rounded">
+    <h4>Popular Books</h4>
+    <div class="deoration">
+        <hr class="line1">
+        <hr class="line2">
+        <hr class="line3">
+    </div>
+    <div class="row px-4 mt-4">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of books">
+              <ng-template carouselSlide [id]="slide.id">
+                    <div class="card text-dark m-2">
+                        <img class="card-img-top" src="http://localhost:5000/{{ slide.photo.split('assets')[1]}}" alt="Title">
+                        <div class="card-body">
+                          <h6 class="card-title">{{slide.title}}</h6>
+                        </div>
+                    </div>
+              </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    
+</section>
+
+<section class="popularAuthors py-5 text-center">
+    <h4>Popular Authors</h4>
+    <div class="deoration">
+        <hr class="line1">
+        <hr class="line2">
+        <hr class="line3">
+    </div>
+    <div class="container-fluid">
+        <div class="container text-center mt-5">
+            <div class="row">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let slide of author">
+                      <ng-template carouselSlide [id]="slide.id">
+                        <div class="card text-dark m-2">
+                            <div class="author-img">
+                                <img class="card-img-top" src="http://localhost:5000/{{slide.Image.split('assets')[1] }}" alt="Title">
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title">{{slide.firstName}} {{slide.lastName}}</h6>
+                            </div>
+                          </div>
+                      </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Popular Reviews -->
+<section class="popularRewviews py-5 text-center">
+    <h4>Popular Rewiews</h4>
+    <div class="deoration">
+        <hr class="line1">
+        <hr class="line2">
+        <hr class="line3">
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let slide of reviwes" >
+                  <ng-template carouselSlide [id]="slide.id">
+                    <div class="review-data m-2">
+                        <div class="inner py-4">
+                            <div class="rewiew-item m-auto">
+                                <img class="rounded-circle img-fluid" style="width: 150px; height:150px" src="../../../assets/images/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.avif" alt="">
+                            </div>
+                            <h5 class="mt-4 mb-3">{{slide.review}}</h5>
+                        </div>
+                    </div>
+                  </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+

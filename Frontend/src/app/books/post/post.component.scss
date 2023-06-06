@@ -1,0 +1,43 @@
+textarea
+{
+    border:1px dashed rgba(0, 0, 0, 0.167);
+    min-height: 200px;
+    max-height: 200px;
+    font-size: 23px;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.096);
+    padding: 12px 8px;
+}
+textarea:focus
+{
+    box-shadow: none;
+    border-color:black ;
+}
+textarea::placeholder
+{
+    transition: all 0.3s;
+}
+textarea:hover::placeholder{
+    color: #ab64bd ;
+}
+button
+{
+    display: block;
+    margin: auto;
+    font-weight: 900;
+    background: #efefef;
+    border: 1px solid #c1c1c1;
+    font-size: 18px;
+    font-family: monospace;
+    padding: 4px 16px;
+    transition: all 0.2s;
+}
+button:hover
+{
+    transform: scale(1.05);
+    background: #efefef;
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    box-shadow: 5px 6px 4px #726f6f;
+    text-shadow: 1px 2px 3px #8d8a8a;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngFor="let book of books" class="book">
+        <div class="row ">
+            <div class="col-xl-1">
+                <div class="book-cover">
+                    <img src="http://localhost:5000/{{ book.photo.split('assets')[1]}}" >
+                </div>
+            </div>
+            <div class="col-xl-11">
+                <h2 class="book-title">{{book.title}}</h2>
+                <div class="avgrate">
+                    <ngb-rating [max]="5"  [rate]="book.avgRating" class="controllablestars" [readonly]="true" ></ngb-rating>
+                </div>
+                <p>
+                    {{book.desc}}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

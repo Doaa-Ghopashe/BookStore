@@ -1,0 +1,34 @@
+
+.card
+{  
+    transition: all 0.5s;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 500px;
+}
+.book-title{
+    border-bottom: 1px solid #0000002e;
+    padding-bottom: 11px;
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    font-weight: 600;
+}
+.book-cover{
+    overflow: hidden;
+    height: 278px;
+    display: flex;
+}
+.book-cover img{
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.card:hover .book-cover img{
+    transform: scale(1.3);
+}
+p{
+    text-transform: capitalize;
+}

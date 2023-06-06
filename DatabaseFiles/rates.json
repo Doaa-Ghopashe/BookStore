@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "647f1fd927aebf60ee9c66b6"
+  },
+  "rate_val": 3,
+  "book_id": "647f16a627aebf60ee9c64fc",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f299b27aebf60ee9c6ba5"
+  },
+  "rate_val": 5,
+  "book_id": "647f16ef27aebf60ee9c6501",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f305327aebf60ee9c732b"
+  },
+  "rate_val": 3,
+  "book_id": "647f186127aebf60ee9c651a",
+  "user_id": "647f0874f4b7314dc57c17d9",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f39a327aebf60ee9c75c6"
+  },
+  "rate_val": 3,
+  "book_id": "647f178927aebf60ee9c650b",
+  "user_id": "647e6ad00c9519441b21f697",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647f3c8027aebf60ee9c7671"
+  },
+  "rate_val": 2,
+  "book_id": "647f16ef27aebf60ee9c6501",
+  "user_id": "647e6ad00c9519441b21f697",
+  "__v": 0
+}]

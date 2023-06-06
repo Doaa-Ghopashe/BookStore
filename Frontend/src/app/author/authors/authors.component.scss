@@ -1,0 +1,26 @@
+.card
+{  
+    // background-color: #EFD7F6;
+    transition: all 0.5s;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 340px;
+}
+.author-img
+{
+    height: 140px;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 15vh;
+}
+.card-body{
+    // padding: 0;
+   
+}
+.author-name
+{
+    font-weight: 700;
+    font-size: 16px;
+}

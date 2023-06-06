@@ -1,0 +1,17 @@
+<div style="height: 350px;overflow-y: scroll;padding: 10px;border:1px solid rgb(213, 211, 211);margin: 30px 0;">
+    <div class="container my-3 p-0" *ngFor="let review of reviewslist">
+        <div class="header">
+             <div class="row align-items-center ">
+                 <div class="usr-img">
+                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+                 </div>
+                 <div class="username">
+                     <span class="usrname">{{review.user_id.firstName}} {{review.user_id.lastName}}</span>
+                 </div>
+             </div>
+        </div>
+        <div class="body">
+             <p class="review">{{review.review}}</p>
+        </div>
+     </div>
+</div>

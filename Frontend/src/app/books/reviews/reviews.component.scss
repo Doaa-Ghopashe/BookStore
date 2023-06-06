@@ -1,0 +1,40 @@
+.usrname {
+    font-size: 21px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.review {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: ui-monospace;
+    text-transform: capitalize;
+}
+
+.body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #e3e2e344;
+}
+
+.header {
+    padding: 10px 5px;
+    background-color: #f6e1a4;
+}
+
+.username {
+    width: 50%;
+}
+
+.usr-img {
+    width: 5%;
+}
+
+.container {
+    border-radius: 8px;
+    overflow: hidden;
+}

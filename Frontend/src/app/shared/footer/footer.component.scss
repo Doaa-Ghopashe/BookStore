@@ -1,0 +1,30 @@
+footer
+{
+    background-color: #f9f8f4;
+    span
+    {
+        font-weight: 700;
+        a
+        {
+            color: #ab64bd;
+        }
+    }
+    .social-icons
+    {
+        width: 18%;
+    }
+    .social-icons a
+    {
+        text-decoration: none;
+        color: #000;
+    }
+    .social-icons svg
+    {
+        font-size: 20px;
+        transition: all 0.5s;
+    }
+    .social-icons svg:hover
+    {
+        color: #ab64bd;
+    }
+}

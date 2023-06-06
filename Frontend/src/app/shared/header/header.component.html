@@ -1,0 +1,22 @@
+<div class="" >
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <a class="navbar-brand" href="#"><i class="fa fa-address-book logo-icone" aria-hidden="true"></i> BookStore</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-sliders-h  "></i></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a *ngIf="!isLog" routerLink="/user/register" class="dropdown-item">Register</a>
+                      <a *ngIf="!isLog"  routerLink="/user/login" class="dropdown-item" >Login</a>
+                      <a *ngIf="isLog" (click)="logOut()"class="dropdown-item" >logOut</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  </div>
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  

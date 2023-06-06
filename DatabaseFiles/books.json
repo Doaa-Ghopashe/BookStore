@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "647f16a627aebf60ee9c64fc"
+  },
+  "title": "The Power Within me",
+  "AuthorId": {
+    "$oid": "647f158927aebf60ee9c64ea"
+  },
+  "categoryId": {
+    "$oid": "647f12bff4b7314dc57c1801"
+  },
+  "photo": "assets/imgs/books/1686050470787--01ba5280ed11b9c00fc9a909374401bc.jpg",
+  "__v": 0,
+  "avgRating": 3,
+  "desc": "do you know what is power in your personality so let me ask you again at the end of this book\n"
+},{
+  "_id": {
+    "$oid": "647f16ef27aebf60ee9c6501"
+  },
+  "title": "The great GSB",
+  "AuthorId": {
+    "$oid": "647f15c727aebf60ee9c64f0"
+  },
+  "categoryId": {
+    "$oid": "647f12bff4b7314dc57c1801"
+  },
+  "photo": "assets/imgs/books/1686050543077--the-great-gatsby.jpg",
+  "__v": 0,
+  "avgRating": 4,
+  "desc": "do you wnat to know what is GATSB. let me define it for you in a shorter sentence "
+},{
+  "_id": {
+    "$oid": "647f174527aebf60ee9c6506"
+  },
+  "title": "Meeting in Paris",
+  "AuthorId": {
+    "$oid": "647f15a827aebf60ee9c64ed"
+  },
+  "categoryId": {
+    "$oid": "647f12b4f4b7314dc57c17ff"
+  },
+  "photo": "assets/imgs/books/1686050629983--91opdG2t1KL._AC_UL210_SR210,210_.jpg",
+  "__v": 0,
+  "desc": "Paris the home of love all lovers meet their excpet them",
+  "avgRating": 0
+},{
+  "_id": {
+    "$oid": "647f178927aebf60ee9c650b"
+  },
+  "title": "Out of the dark",
+  "AuthorId": {
+    "$oid": "647f161527aebf60ee9c64f3"
+  },
+  "categoryId": {
+    "$oid": "647f12a8f4b7314dc57c17fd"
+  },
+  "photo": "assets/imgs/books/1686050697872--Book-Cover-PNG-Clipart.png",
+  "__v": 0,
+  "desc": "don't follow me to the dark side you couldn't leave it again ...",
+  "avgRating": 0
+},{
+  "_id": {
+    "$oid": "647f17c327aebf60ee9c6510"
+  },
+  "title": "Black and white",
+  "AuthorId": {
+    "$oid": "647f15c727aebf60ee9c64f0"
+  },
+  "categoryId": {
+    "$oid": "647f12bff4b7314dc57c1801"
+  },
+  "photo": "assets/imgs/books/1686050755761--170-1707194_free-psd-book-cover-template-book-cover-template.png",
+  "__v": 0,
+  "desc": "this book describe the life sides\n",
+  "avgRating": 0
+},{
+  "_id": {
+    "$oid": "647f181727aebf60ee9c6515"
+  },
+  "title": "Living the sweet life",
+  "AuthorId": {
+    "$oid": "647f158927aebf60ee9c64ea"
+  },
+  "categoryId": {
+    "$oid": "647f12b4f4b7314dc57c17ff"
+  },
+  "photo": "assets/imgs/books/1686050839337--attachment_124375905.jpeg",
+  "__v": 0,
+  "desc": "live happy with smiley face ",
+  "avgRating": 0
+},{
+  "_id": {
+    "$oid": "647f186127aebf60ee9c651a"
+  },
+  "title": "The power of the pivoting",
+  "AuthorId": {
+    "$oid": "647f15c727aebf60ee9c64f0"
+  },
+  "categoryId": {
+    "$oid": "647f12bff4b7314dc57c1801"
+  },
+  "photo": "assets/imgs/books/1686050913263--attachment_124595315.jpeg",
+  "__v": 0,
+  "desc": "the power of pivoting make everything under control \n",
+  "avgRating": 3
+}]

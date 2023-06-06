@@ -1,0 +1,55 @@
+
+<div class="container-fluid" style="background-color: #f1f5f9">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: white">
+        <h2 matSubheader class="mt-4" style="text-align: center;">
+            <b>Book shelf</b>
+          </h2>
+          <div class="content">
+            <a  class="contentType" routerLinkActive="contentType" (click)="getAll('all')"> All</a>
+            <a class="contentType" (click)="getAll('read')">Read </a>
+            <a class="contentType" (click)="getAll('currentReading')">Currently Reading </a>
+            <a  class="contentType" (click)="getAll('wantToRead')">Want to Read</a>
+          </div>
+      </div>
+      <div class="container-fluid" style="width: 82vw">
+        <div class="pageBox mt-4 ">
+            <table>
+                <thead class="mb-3">
+                    <th>Cover</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Avg Rate</th>
+                    <th>Rating</th>
+                    <th>Shelve</th>
+                </thead>
+                <div class="py-2"></div>
+                <tbody>
+                    <tr *ngFor="let item of currentContect | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+                        <td><img   style="width: 100px;" src="http://localhost:5000/{{ item['book_id'].photo.split('assets')[1] }}" alt=""></td>
+                        <td>{{item['book_id'].title}}</td>
+                        <td>{{item['book_id']['AuthorId']['firstName']}} {{item['book_id']['AuthorId']['lastName']}}</td>
+                        <td> <ngb-rating [max]="5" [rate]="item['book_id'].avgRating" class="controllablestars" [readonly]="true"></ngb-rating></td>
+                        <td ><ngb-rating [max]="5" [rate]="0" class="controllablestars" [readonly]="false"></ngb-rating></td>
+                        <td>
+                            <div class="dropdown">
+                                <select (change)="changestatus($event,item['book_id']['_id'])" [(ngModel)]="item.shelve" id="shelve">
+                                    <option value="" >--Reserve a book--</option>
+                                    <option value="want to read">want to read</option>
+                                    <option value="currently reading">currently reading</option>
+                                    <option value="read">read</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+             </table>
+             <div class="text-center paginationNav mt-2">
+                <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+</div>
